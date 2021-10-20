@@ -1,0 +1,49 @@
+*{
+    text-decoration: none;
+    color: inherit;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+/*INICIO*/
+.index{
+    background: url(multimedia/foto3.jpeg) no-repeat center/cover;
+    height: 600px;
+    width: auto;
+}
+
+.index-dos{
+    background-color: black;
+    color: white;
+    height: 300px;
+    width: auto;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+}
+
+.redes{
+    color: white;
+}
+
+/* Contacto */
+.contacto{
+    background: url(multimedia/foto4.jpeg) no-repeat center/cover;
+    min-height: 600px;
+}
+
+.contacto-formulario{
+    background-color: rgba(1, 1, 1, 0.36);
+    border-radius: 5px;
+    max-width: 550px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spa&Co. - Contacto</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Nails Bar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto fs-5">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tienda.html">Tienda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+              </li>       
+            </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <h2> CONTACTO </h2>
+
+    <section class="contacto containere-fluid text-light p-5">
+        <form class="contacto-formulario container p-3 fs-5">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre y Apellido</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="tel" class="form-label">Telefono</label>
+                <input type="tel" class="form-control" id="tel" required>
+              </div>
+            <div class="mb-3 row">
+                <label for="consulta" class="form-label">Escribanos su consulta</label>
+                <textarea name="consulta" id="consulta" cols="30" rows="10"></textarea>
+              </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="Newsletter">
+              <label class="form-check-label" for="Newsletter">Quiero recibir el Newsletter</label>
+            </div>
+            <button type="submit" class="btn btn-secondary">Enviar</button>
+          </form>
+    </section>
+
+    <footer>
+        <div class="row justify-content-between">
+            <div class="col">
+                <ul class="container-fluid d-flex gap-3 align-items-center">
+                    <li><a class="redes" href=""></li><span class="iconify" data-icon="akar-icons:instagram-fill" data-inline="false"></span></a></li>
+                    <li><a class="redes" href=""><span class="iconify" data-icon="akar-icons:facebook-fill" data-inline="false"></span></a></li>
+                  </ul>
+            </div>
+            <div class="col">
+                <p>Nails&Spa - &copy</p>
+            </div>
+  
+          </div>
+    </footer>
+</body>
+</html>
