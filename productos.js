@@ -7,6 +7,7 @@ class Product {
         this.descripcion = descripcion;
         this.precio = precio;
         this.stock = stock; 
+        //this.imagen = imagen;
     }
 }
 
