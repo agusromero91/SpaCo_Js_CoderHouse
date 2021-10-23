@@ -19,7 +19,7 @@ listaProductos.push (new Product ("1001", "Accesorios", "Marcadores correctores"
 listaProductos.push (new Product ("1002", "Accesorios", "Lima", 200, 50));
 listaProductos.push (new Product ("1003", "Accesorios", "Quitaesmalte", 650, 15));
 listaProductos.push (new Product ("1004", "Combos", "Combo esmalte Opi", 6500, 5));
-listaProductos.push (new Product ("1005", "Combos", "Combo mix basi", 880, 25));
+listaProductos.push (new Product ("1005", "Combos", "Combo mix basico", 880, 25));
 
 //guardo datos
 localStorage.setItem("lista", JSON.stringify(listaProductos));
