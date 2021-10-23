@@ -44,12 +44,11 @@ listaObjetos.forEach(element => {
       <h5 class="card-title">${element.descripcion}</h5>
       <h6 class="card-subtitle mb-2 text-muted">${element.categoria}</h6>
       <p class="card-text">$ ${element.precio}</p>
-      <button class="btn btn-primary" onclick="comprar(${index})">Comprar</button>
+      <button class="compra btn btn-primary" onclick="comprar(${index})">Comprar</button>
     </div>
   </div>
 `
 })
-
 
 const comprar = (index) => {
 
@@ -63,6 +62,7 @@ const comprar = (index) => {
     carrito.push(listaObjetos[index])
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
 
 //Eventos 
 document.getElementById("productoCard").addEventListener("click", () => {

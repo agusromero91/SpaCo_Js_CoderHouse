@@ -26,6 +26,24 @@ body{
     width: auto;
 }
 
+/*SERVICIOS*/
+.manos{
+    background-color: rgb(251, 229, 232);
+    color: grey;
+}
+
+.pies{
+    background-color: rgba(90, 159, 135, 0.27);
+    color: grey;
+}
+
+/*TIENDA*/
+.compra{
+    background-color: rgb(225, 152, 225);
+    border-color: rgb(225, 152, 225);
+}
+
+
 /* Footer */
 footer{
     background-color: black;
