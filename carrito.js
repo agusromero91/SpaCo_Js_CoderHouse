@@ -1,6 +1,7 @@
 let listaCarrito;
 let imprimirCarrito = document.getElementById("carritoCard")
 let btn = document.getElementById("finalizarCompra")
+let imprimirTotal = document.getElementById("total")
 
 if (localStorage.getItem("carrito") == null) {
     console.log("Carrito Vacio")
@@ -11,15 +12,12 @@ if (localStorage.getItem("carrito") == null) {
 
 //mostrar Carrito
 listaCarrito.forEach(element => {
-    let index = listaCarrito.indexOf(element);
     imprimirCarrito.innerHTML += `
     <div class="card" style="width: 18rem;">
     <img src="" class="card-img-top" alt="">
     <div class="card-body">
       <h5 class="card-title">${element.descripcion}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">${element.categoria}</h6>
       <p class="card-text">$ ${element.precio}</p>
-      <button class="btn btn-primary" onclick="comprar(${index})">Comprar</button>
     </div>
   </div>
 `
@@ -36,7 +34,16 @@ const finalizarCompra = () => {
     })
 
     console.log("Felicitaciones, tu compra fue aprobada, gastaste " + total);
-    localStorage.removeItem("carrito")
+    localStorage.removeItem("carrito");
+
+    imprimirTotal.innerHTML += `
+    <div class="card-body">
+      <p class="card-text">$ ${total}</p>
+    </div>
+  </div>
+`
+
+
 }
 
 btn.addEventListener("click", () => {
