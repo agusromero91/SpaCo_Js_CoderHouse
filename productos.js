@@ -1,6 +1,5 @@
 /* -------------- Productos ------------ */
-//Clase y productos pre-cargados
-
+//Clase Producto
 class Product {
     constructor (sku, categoria, descripcion, precio, stock){
         this.sku = sku; 
@@ -13,46 +12,41 @@ class Product {
 
 let listaProductos = [];
 
-listaProductos.push (new Product ("1000", "esmalte", "Esmalte Opi Shine: rojo", 900, 10));
-listaProductos.push (new Product ("1001", "accesorios", "Marcadores correctores", 650, 20));
-listaProductos.push (new Product ("1002", "accesorios", "Lima", 200, 50));
-listaProductos.push (new Product ("1003", "accesorios", "Quitaesmalte", 650, 15));
-listaProductos.push (new Product ("1004", "combos", "Combo esmalte Opi", 6500, 5));
-listaProductos.push (new Product ("1005", "combos", "Combo mix basi", 880, 25));
+//productos en lista existente
+listaProductos.push (new Product ("1000", "Esmalte", "Esmalte Opi Shine: rojo", 900, 10));
+listaProductos.push (new Product ("1001", "Accesorios", "Marcadores correctores", 650, 20));
+listaProductos.push (new Product ("1002", "Accesorios", "Lima", 200, 50));
+listaProductos.push (new Product ("1003", "Accesorios", "Quitaesmalte", 650, 15));
+listaProductos.push (new Product ("1004", "Combos", "Combo esmalte Opi", 6500, 5));
+listaProductos.push (new Product ("1005", "Combos", "Combo mix basi", 880, 25));
 
-if (localStorage.getItem("lista" == null)){
-    listaProductos = []
-} else {
-    listaProductos = JSON.parse(localStorage.getItem("lista"))
-}
+//guardo datos
+localStorage.setItem("lista", JSON.stringify(listaProductos));
 
+//Mostrar Productos
 let listaObjetos;
-let imprimirProductos = document.getElementById("productoCard")
+let imprimirProductos = document.getElementById("productoCard");
 
-//verifico si hay productos en la lista 
 if (localStorage.getItem("lista") == null) {
     console.log("No tenes productos para mostrar")
 } else {
     listaObjetos = JSON.parse(localStorage.getItem("lista"))
 }
 
-//recorro los productos
 listaObjetos.forEach(element => {
-
-    let index = listaObjetos.indexOf(element)
-
-    imprimirDatos.innerHTML += `
+    let index = listaObjetos.indexOf(element);
+    imprimirProductos.innerHTML += `
     <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="">
-        <div class="card-body">
-          <h5 class="card-title">${element.descripcion}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${element.categoria}</h6>
-          <p class="card-text">${element.precio}</p>
-          <button class="btn btn-primary" onclick="comprar(${index})">Comprar</button>
-        </div>
-      </div>
-    `
-});
+    <img src="" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">${element.descripcion}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">${element.categoria}</h6>
+      <p class="card-text">$ ${element.precio}</p>
+      <button class="btn btn-primary" onclick="comprar(${index})">Comprar</button>
+    </div>
+  </div>
+`
+})
 
 const comprar = (index) => {
 
@@ -63,10 +57,17 @@ const comprar = (index) => {
         carrito = JSON.parse(localStorage.getItem("carrito"))
     }
 
-
     carrito.push(listaObjetos[index])
     localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
+//Eventos 
+document.getElementById("productoCard").addEventListener("click", () => {
+    comprar();
+})
+
+
+
 
 
 
@@ -81,7 +82,7 @@ const comprar = (index) => {
 /* -------------- FORMA DE PAGO ------------ */
 //Suma del total + calculo de cuotas
 //Calculo de costo total segun cantidad de pedidos solicitados
-
+/*
 let cant1 = document.getElementById("cantManos");
 let cant2 = document.getElementById("CantPies");
 let cant3 = document.getElementById("cantMasaje");
@@ -132,3 +133,4 @@ function mostrarResultado(z){
     console.log("El costo total de tu compra es: $" + z);
     //alert(`El costo total de tu compra es: $ ${z}`);;
 }
+*/
