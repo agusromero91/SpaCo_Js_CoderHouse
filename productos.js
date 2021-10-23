@@ -34,6 +34,7 @@ if (localStorage.getItem("lista") == null) {
     listaObjetos = JSON.parse(localStorage.getItem("lista"))
 }
 
+
 listaObjetos.forEach(element => {
     let index = listaObjetos.indexOf(element);
     imprimirProductos.innerHTML += `
@@ -49,11 +50,12 @@ listaObjetos.forEach(element => {
 `
 })
 
+
 const comprar = (index) => {
 
     let carrito;
     if (localStorage.getItem("carrito") == null) {
-        carrito = []
+        carrito = [];
     } else {
         carrito = JSON.parse(localStorage.getItem("carrito"))
     }
